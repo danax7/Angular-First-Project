@@ -1,0 +1,13 @@
+<section class="flex flex-col w-96 bg-purple-300 rounded-xl h-2/6">
+  <img
+    class="rounded-t-xl h-64 w-full object-cover"
+    [src]="housingLocation.photo"
+    alt="Exterior photo of {{ housingLocation.name }}"
+  />
+  <div class="p-4 bg-purple-200 rounded-lg">
+    <h2 class="text-fuchsia-600 p-1 text-lg">{{ housingLocation.name }}</h2>
+    <p class="listing-location p-1">
+      {{ housingLocation.city }}, {{ housingLocation.state }}
+    </p>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+<section>
+  <form>
+    <input
+      type="text"
+      class="border-solid border-2 border-violet-300 rounded-sm"
+      placeholder="Filter by city"
+    />
+    <button
+      class="px-10 border-solid border-2 border-blue-500 rounded-lg"
+      type="button"
+    >
+      Search
+    </button>
+  </form>
+</section>
+
+<section class="flex flex-wrap gap-5">
+  <app-housing-location
+    *ngFor="let housingLocation of housingLocationList"
+    [housingLocation]="housingLocation"
+  >
+  </app-housing-location>
+</section>
