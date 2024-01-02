@@ -1,16 +1,18 @@
 <main>
-  <header class="brand-name">
-    <h1 class="font-bold mb-2 text-center text-2xl text-slate-700">
-      {{ title | titlecase }}
-    </h1>
-    <img
-      class="w-24"
-      src="https://www.rawshorts.com/freeicons/wp-content/uploads/2017/01/blue_repicthousebase_1484336386-1.png"
-      alt="logo"
-      aria-hidden="true"
-    />
-  </header>
-  <section class="content">
-    <app-home></app-home>
+  <a [routerLink]="['/']">
+    <header class="brand-name">
+      <h1 class="font-bold mb-2 text-center text-2xl text-slate-700">
+        {{ title }}
+      </h1>
+      <img
+        class="w-24"
+        src="https://www.rawshorts.com/freeicons/wp-content/uploads/2017/01/blue_repicthousebase_1484336386-1.png"
+        alt="logo"
+        aria-hidden="true"
+      />
+    </header>
+  </a>
+  <section class="p-6">
+    <router-outlet></router-outlet>
   </section>
 </main>

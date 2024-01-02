@@ -2,8 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HousingLocationComponent } from '../housing-location/housing-location.component';
-import { HousingLocation } from '../housinglocation';
-import { HousingService } from '../housing.service';
+import { HousingLocation } from '../../types/housinglocation';
+import { HousingService } from '../../services/housing/housing.service';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +15,6 @@ import { HousingService } from '../housing.service';
     HousingLocationComponent,
   ],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
 })
 export class HomeComponent {
   housingLocationList: HousingLocation[] = [];
