@@ -33,7 +33,17 @@
       <input id="last-name" type="text" formControlName="lastName" />
 
       <label for="email">Email</label>
-      <input id="email" type="email" name="email" />
+      <input id="email" type="email" formControlName="email" />
+
+      <div
+        *ngIf="
+          applyForm.get('email')?.hasError('email') &&
+          applyForm.get('email')?.touched
+        "
+      >
+        Invalid email format
+      </div>
+
       <button type="submit">Apply now</button>
     </form>
   </section>
