@@ -27,13 +27,17 @@ export class DetailsComponent {
     email: new FormControl('', [Validators.required, Validators.email]),
   });
 
-  constructor() {
+  constructor() {}
+
+  ngOnInit() {
+    this.loadHousingLocation();
+  }
+
+  async loadHousingLocation() {
     const housingLocationId = Number(this.route.snapshot.params['id']);
-    this.housingService
-      .getHousingLocationById(housingLocationId)
-      .then((housingLocation) => {
-        this.housingLocation = housingLocation;
-      });
+    this.housingLocation = await this.housingService.getHousingLocationById(
+      housingLocationId
+    );
   }
 
   submitApplication() {

@@ -22,12 +22,13 @@ export class HomeComponent {
   housingService: HousingService = inject(HousingService);
 
   constructor() {
-    this.housingService
-      .getAllHousingLocations()
-      .then((housingLocationList: HousingLocation[]) => {
-        this.housingLocationList = housingLocationList;
-        this.filteredLocationList = housingLocationList;
-      });
+    this.loadHousingLocations();
+  }
+
+  async loadHousingLocations() {
+    this.housingLocationList =
+      await this.housingService.getAllHousingLocations();
+    this.filteredLocationList = [...this.housingLocationList];
   }
 
   filterResults(text: string) {
