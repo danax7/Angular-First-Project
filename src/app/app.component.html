@@ -1,17 +1,24 @@
 <main>
-  <a [routerLink]="['/']">
-    <header class="flex flex-row p-5 border-b">
-      <img
-        class="h-8"
-        src="https://www.rawshorts.com/freeicons/wp-content/uploads/2017/01/blue_repicthousebase_1484336386-1.png"
-        alt="logo"
-        aria-hidden="true"
-      />
-      <h1 class="font-bold mb-2 text-center text-2xl text-slate-700">
-        {{ title }}
-      </h1>
-    </header>
-  </a>
+  <header class="flex flex-row p-5 border-b justify-between">
+    <a [routerLink]="['/']">
+      <div>
+        <img
+          class="h-8"
+          src="https://www.rawshorts.com/freeicons/wp-content/uploads/2017/01/blue_repicthousebase_1484336386-1.png"
+          alt="logo"
+          aria-hidden="true"
+        />
+        <h1 class="font-bold mb-2 text-center text-2xl text-slate-700">
+          {{ title }}
+        </h1>
+      </div>
+    </a>
+    <div>
+      <button [routerLink]="['/login']">Login</button>
+      <button [routerLink]="['/register']">Register</button>
+    </div>
+  </header>
+
   <section class="p-6">
     <router-outlet></router-outlet>
   </section>
