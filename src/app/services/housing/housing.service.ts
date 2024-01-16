@@ -26,3 +26,5 @@ export class HousingService {
     );
   }
 }
+
+//json-server --watch db.json
