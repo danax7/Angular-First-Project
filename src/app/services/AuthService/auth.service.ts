@@ -11,8 +11,6 @@ interface userData {
   phoneNumber: string;
 }
 
-
-
 @Injectable({
   providedIn: 'root',
 })
