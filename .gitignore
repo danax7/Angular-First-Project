@@ -11,6 +11,8 @@
 npm-debug.log
 yarn-error.log
 
+git_script.sh
+
 # IDEs and editors
 .idea/
 .project
